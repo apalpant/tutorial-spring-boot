@@ -1,0 +1,26 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { TodoListComponent } from './todo-list/todo-list.component';
+import { TodoComponent } from './todo/todo.component';
+import { CardModule } from 'primeng/card';
+import { ButtonModule } from 'primeng/button';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    TodoListComponent,
+    TodoComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    CardModule,
+    ButtonModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
