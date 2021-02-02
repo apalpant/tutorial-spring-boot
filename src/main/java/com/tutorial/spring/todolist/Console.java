@@ -1,8 +1,8 @@
 package com.tutorial.spring.todolist;
 
-import com.tutorial.spring.todolist.entities.Todo;
+import com.tutorial.spring.todolist.entities.Tache;
 import com.tutorial.spring.todolist.service.LogService;
-import com.tutorial.spring.todolist.service.TodoService;
+import com.tutorial.spring.todolist.service.TacheService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -14,15 +14,15 @@ public class Console implements CommandLineRunner {
     LogService logService;
 
     @Autowired
-    TodoService todoService;
+    TacheService tacheService;
 
     @Override
     public void run(String... args) throws Exception {
         this.logService.tracer("Console (before main ending...) !");
 
-        this.todoService.createTodo(new Todo("un", 1));
-        this.todoService.createTodo(new Todo("deux", 2));
-        this.todoService.createTodo(new Todo("trois", 1));
-        this.todoService.createTodo(new Todo("troisieme", 1));
+        this.tacheService.creer(new Tache("un", 1));
+        this.tacheService.creer(new Tache("deux", 2));
+        this.tacheService.creer(new Tache("trois", 1));
+        this.tacheService.creer(new Tache("troisieme", 1));
     }
 }

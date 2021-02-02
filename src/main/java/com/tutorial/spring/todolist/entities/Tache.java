@@ -7,7 +7,7 @@ import javax.persistence.Id;
 import java.io.Serializable;
 
 @Entity
-public class Todo implements Serializable {
+public class Tache implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
@@ -16,10 +16,10 @@ public class Todo implements Serializable {
 
     private int niveau;
 
-    public Todo() {
+    public Tache() {
     }
 
-    public Todo(String libelle, int niveau) {
+    public Tache(String libelle, int niveau) {
         this.libelle = libelle;
         this.niveau = niveau;
     }
