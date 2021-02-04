@@ -25,7 +25,7 @@ public class TacheServiceImpl implements TacheService {
      * {@inheritDoc}
      */
     @Override
-    public List<Tache> rechercherTous() {
+    public List<Tache> rechercherToutes() {
         List<Tache> result = new ArrayList<>();
         this.tacheRepository.findAll().forEach(result::add);
         return result;
@@ -71,8 +71,8 @@ public class TacheServiceImpl implements TacheService {
      * {@inheritDoc}
      */
     @Override
-    public List<Tache> rechercherParNiveau(int niveau) {
-        return this.tacheRepository.findByNiveau(niveau);
+    public List<Tache> rechercherParPriorite(int priorite) {
+        return this.tacheRepository.findByPriorite(priorite);
     }
 
     /**
@@ -87,7 +87,7 @@ public class TacheServiceImpl implements TacheService {
      * {@inheritDoc}
      */
     @Override
-    public List<Tache> rechercherTousParNiveauAsc() {
-        return this.tacheRepository.rechercherToutesParNiveauAsc();
+    public List<Tache> rechercherToutesParPrioriteAsc() {
+        return this.tacheRepository.rechercherToutesParPrioriteAsc();
     }
 }
